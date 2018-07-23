@@ -4,12 +4,15 @@ body, html {
     height: 100%;
   }
   
-  body {
-    font-family: Roboto;
-    font-size: 12px;
+body {
+    font-family:Roboto;
+    font-size: 13px;
     color: #424242;
   }
   
+  header, footer, section, article, div {
+    box-sizing: border-box;
+  }
   h1, h2, h3, h4, h5 {
     margin: 0; 
   }
@@ -17,10 +20,9 @@ body, html {
   
 main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-    width: 850px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    
     
   }
 
@@ -31,25 +33,32 @@ ul {
     margin: 0;
   }
   
-  .content {
+.content 
+{
+    width:100%;
     display: flex;
     flex-wrap: wrap;
     
-  }
-  
-  
-  .hero, .top-news, .scores, .weather, .recent-news {
-    order: 10;
-  }
+}
+
+.Certification,.workexp{
+    order:10;
+}
+
 .header 
 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-    min-height: 56px;
+    min-height: 60px;
     transition: min-height 0.3s;
-    
+  
 
 }
-  
+ 
+
+.header__menu {
+    display: none;
+  }
+
   .header__inner {
     width: 100%;
     margin-left: auto;
@@ -57,39 +66,45 @@ ul {
   }
   
   .header__logo {
-    height: 90px;
+    height: 130px;
     margin-right: 1em;
     vertical-align: top;
-    margin-top: 12px;
+   /* margin-top: 12px;*/
   }
   
   .header__title {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 4em;
+    float:right;
     margin: 0.5em 0.25em;
     display: inline-block;
     color: #212121;
   }
 
 .news__title {
-    font-weight: 300;
+    font-weight: 650;
     border-bottom: 1px solid #E0E0E0;
     line-height: 24px;
     font-size: 16px;
   }
 
-.recent-news {
+.workexp {
     flex-grow: 1;
-    width:100%;
     clear: both;
     padding: 1em;
   }
-  
+
+  .Certification {
+    flex-grow: 1;
+    clear: both;
+    padding: 1em;
+  }
+
   .snippet {
     clear: both;
     margin: 24px 0;
   }
-  
+
   .snippet__thumbnail {
     width: 100px;
     float: left;
@@ -126,4 +141,48 @@ footer {
     text-decoration: none;
     color: #333;
     padding: 1.5em;
+  }
+
+
+  @media screen and (min-width: 670px) and (max-width: 849px) {
+    .workexp
+    {
+     width:50%;
+    }
+    .Certification
+    {
+    width:50%;
+    }
+}
+    @media screen and (min-width:501px) and (max-width: 670px) {
+        .header__title {
+            font-weight: 200;
+            font-size: 3em;
+        }
+ 
+        
+   .header__logo {
+    height: 100px;
+    }
+    }
+  
+    @media screen and (max-width: 500px) 
+    {
+        .header__title {
+            font-weight: 150;
+            font-size: 2em;
+        }
+        
+        .header__logo {
+            height: 80px;
+        }
+    }
+
+@media screen and (min-width: 850px) {
+    main,.header__inner,.content,header 
+    {
+      width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
