@@ -1,188 +1,227 @@
-body, html {
+body, html 
+    {
     margin:12px;
     padding: 0;
     height: 100%;
-  }
+    }
   
-body {
+body 
+    {
     font-family:Roboto;
     font-size: 13px;
     color: #424242;
-  }
+    }
   
-  header, footer, section, article, div {
+header, footer, section, article, div 
+    {
     box-sizing: border-box;
-  }
-  h1, h2, h3, h4, h5 {
+    }
+
+h1, h2, h3, h4, h5 
+  {
     margin: 0; 
   }
-
   
-main {
+main 
+    {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    
-  }
-
+    }
   
-ul {
+ul 
+    {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
+    }
   
 .content 
-{
+    {
     width:100%;
     display: flex;
     flex-wrap: wrap;
-    
-}
-
-.Certification,.workexp{
-    order:10;
-}
+    }
 
 .header 
-{
+    {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
     min-height: 60px;
     transition: min-height 0.3s;
-  
-
-}
+    }
  
-
-.header__menu {
+.header__menu   
+    {
     display: none;
-  }
+    }
 
-  .header__inner {
+  .header__inner 
+    {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-  }
+    }
   
-  .header__logo {
+.header__logo 
+    {
     height: 130px;
     margin-right: 1em;
     vertical-align: top;
-   /* margin-top: 12px;*/
-  }
+    }
   
-  .header__title {
+.header__title 
+    {
     font-weight: 400;
     font-size: 4em;
     float:right;
     margin: 0.5em 0.25em;
-    display: inline-block;
     color: #212121;
-  }
+    }
 
-.news__title {
+.news__title 
+    {
     font-weight: 650;
     border-bottom: 1px solid #E0E0E0;
     line-height: 24px;
     font-size: 16px;
-  }
+    }
 
-.workexp {
+.workexp 
+    {
     flex-grow: 1;
     clear: both;
     padding: 1em;
-  }
+    }
 
-  .Certification {
+.Certification 
+    {
     flex-grow: 1;
     clear: both;
     padding: 1em;
-  }
+    }
 
-  .snippet {
+.snippet 
+    {
     clear: both;
     margin: 24px 0;
-  }
+    }
 
-  .snippet__thumbnail {
+.snippet__thumbnail 
+    {
     width: 100px;
     float: left;
     margin-right: 1em;
-  }
+    }
   
-  .snippet__title {
+.snippet__title 
+  {
     font-weight: 500;
   }
   
-  .snippet__title a {
+.snippet__title a 
+    {
     text-decoration: none;
     color: #666;
-    padding: 1.5em inherit;
-  }
+    padding: 1.5em;
+    }
   
-  .snippet__title a:hover,
-  .snippet__title a:active {
+.snippet__title a:hover,
+.snippet__title a:active 
+    {
     text-decoration: underline;
-  }
+    }
   
-footer {
+footer 
+    {
     border-top: 1px solid #E0E0E0;
     padding: 1em;
     width: 100%;
-  }
+    }
   
-  footer li {
+footer li 
+    {
     display: inline-block;
     margin: 0 1em;
-  }
+    }
   
-  footer a {
+footer a 
+    {
     text-decoration: none;
     color: #333;
     padding: 1.5em;
-  }
+    }
 
 
-  @media screen and (min-width: 670px) and (max-width: 849px) {
-    .workexp
+@media screen and (min-width: 670px) and (max-width: 849px) 
     {
-     width:50%;
-    }
-    .Certification
-    {
-    width:50%;
-    }
-}
-    @media screen and (min-width:501px) and (max-width: 670px) {
-        .header__title {
-            font-weight: 200;
-            font-size: 3em;
+        .workexp
+        {
+        width:50%;
         }
- 
-        
-   .header__logo {
-    height: 100px;
+        .Certification
+        {
+        width:50%;
+        }
     }
+
+    @media screen and (min-width:501px) and (max-width: 670px) 
+    {
+        .header__title 
+        {
+            font-weight: 100;
+            font-size: 2.5em;
+        }
+      
+        .header__logo 
+        {
+        height: 100px;
+        }
     }
   
-    @media screen and (max-width: 500px) 
+@media screen and (min-width:400px) and (max-width: 500px) 
     {
-        .header__title {
-            font-weight: 150;
+        .header__title 
+        {
+            font-weight: 80;
             font-size: 2em;
         }
         
-        .header__logo {
+        .header__logo 
+        {
             height: 80px;
+        }
+
+        footer li
+        {
+            font-size: 9.5px;
         }
     }
 
-@media screen and (min-width: 850px) {
-    main,.header__inner,.content,header 
+@media screen and (max-width:400px)
     {
-      width: 850px;
-      margin-left: auto;
-      margin-right: auto;
+        .header__title 
+        {
+            font-weight: 80;
+            font-size: 1.5em;
+        }
+        
+        .header__logo 
+        {
+            height: 60px;
+        }
+        footer li
+        {
+            font-size: 8.5px;
+        }
     }
-  }
+
+@media screen and (min-width: 850px) 
+    {
+        main,.header__inner,.content,header 
+        {
+            width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
